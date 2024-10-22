@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="URDF_PBL4">
+  <link
+    name="basefoot_link">
+    <inertial>
+      <origin
+        xyz="0.00896603363868428 0.000439468936754131 0.0886482200894458"
+        rpy="0 0 0" />
+      <mass
+        value="0.598805785894526" />
+      <inertia
+        ixx="0.00151492277035313"
+        ixy="-1.1392090890363E-08"
+        ixz="-2.42194818987648E-17"
+        iyy="0.000964526793806794"
+        iyz="-1.28922871854692E-15"
+        izz="0.00242046398894691" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_PBL4/meshes/basefoot_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_PBL4/meshes/basefoot_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.00880665995811239 -7.31085218336203E-08 0.0268949487496748"
+        rpy="0 0 0" />
+      <mass
+        value="0.600596066548402" />
+      <inertia
+        ixx="0.00151495778238491"
+        ixy="-1.13920908900276E-08"
+        ixz="-2.42195881795455E-17"
+        iyy="0.000964589527483503"
+        iyz="-1.28922953522354E-15"
+        izz="0.00242049900097869" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_PBL4/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_PBL4/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="base_joint"
+    type="fixed">
+    <origin
+      xyz="0 0.000439542263851761 0.0615861593182222"
+      rpy="0 0 0" />
+    <parent
+      link="basefoot_link" />
+    <child
+      link="base_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="whell_left">
+    <inertial>
+      <origin
+        xyz="1.84279314030533E-10 -7.88503956572484E-10 -0.0015399077510947"
+        rpy="0 0 0" />
+      <mass
+        value="0.0351748276981318" />
+      <inertia
+        ixx="1.52372847532062E-05"
+        ixy="4.72755323784425E-10"
+        ixz="1.08335311183762E-14"
+        iyy="1.52369777721676E-05"
+        iyz="-7.95982431964832E-14"
+        izz="2.57858861550241E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_PBL4/meshes/whell_left.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_PBL4/meshes/whell_left.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="whell_left_joint"
+    type="continuous">
+    <origin
+      xyz="-0.0445000000003502 0.124882808214802 -0.0290000000001111"
+      rpy="-1.5707963267949 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="whell_left" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="whell_right">
+    <inertial>
+      <origin
+        xyz="-1.85674975394789E-10 -7.88357282233143E-10 0.00153990775115259"
+        rpy="0 0 0" />
+      <mass
+        value="0.035174827698132" />
+      <inertia
+        ixx="1.5237284753206E-05"
+        ixy="-4.72755323420814E-10"
+        ixz="1.10897939258506E-14"
+        iyy="1.52369777721678E-05"
+        iyz="7.95985758325432E-14"
+        izz="2.57858861550241E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_PBL4/meshes/whell_right.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_PBL4/meshes/whell_right.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="whell_right_joint"
+    type="continuous">
+    <origin
+      xyz="-0.044499999998961 -0.125186859734608 -0.0289999999999652"
+      rpy="-1.5707963267949 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="whell_right" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="caster">
+    <inertial>
+      <origin
+        xyz="1.95084267663598E-05 0.000439542263851692 0.00698615931822151"
+        rpy="0 0 0" />
+      <mass
+        value="0.00143675504024173" />
+      <inertia
+        ixx="2.8160398788738E-08"
+        ixy="-1.41363874215605E-24"
+        ixz="8.07793566946315E-25"
+        iyy="2.8160398788738E-08"
+        iyz="3.02922587604867E-25"
+        izz="2.8160398788738E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_PBL4/meshes/caster.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.92156862745098 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_PBL4/meshes/caster.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="caster_joint"
+    type="continuous">
+    <origin
+      xyz="0.0599804915732332 -0.000439542263851719 -0.0615861593182222"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="caster" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="lidar">
+    <inertial>
+      <origin
+        xyz="0.0120602389273986 -0.00053208991086634 -0.0287648851211533"
+        rpy="0 0 0" />
+      <mass
+        value="0.0730845796011579" />
+      <inertia
+        ixx="1.9580879016053E-05"
+        ixy="-1.03933953886373E-07"
+        ixz="-4.28391068677778E-07"
+        iyy="2.41250110052066E-05"
+        iyz="9.42657407989281E-09"
+        izz="4.14184576558715E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_PBL4/meshes/lidar.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_PBL4/meshes/lidar.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="lidar_joint"
+    type="fixed">
+    <origin
+      xyz="0.0177951222632604 -0.000258417218932105 0.177153022960324"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="lidar" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>
